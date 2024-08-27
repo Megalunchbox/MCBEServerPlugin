@@ -27,6 +27,7 @@ import java.util.LinkedHashMap;
 public class ExamplePlugin extends PluginBase {
     public static ExamplePlugin INSTANCE;
     public static PluginI18n I18N;
+    public static PDataManager pData;
 
     @Override
     public void onLoad() {
@@ -85,6 +86,8 @@ public class ExamplePlugin extends PluginBase {
 
         //Don't forget to save it!
         config.save();
+
+        pData = new PDataManager(this);
     }
 
     @Override

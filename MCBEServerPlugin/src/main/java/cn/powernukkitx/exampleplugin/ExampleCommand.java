@@ -120,6 +120,11 @@ public class ExampleCommand extends PluginCommand<ExamplePlugin> {
                     log.addMessage(TextFormat.WHITE + "%exampleplugin.helloworld", players.stream().map(Player::getName).toList().toString()).output();
                 }
             }
+
+            case "debugPlayer" -> {
+                if (sender.isPlayer())
+            }
+
             default -> {
                 return 0;
             }
